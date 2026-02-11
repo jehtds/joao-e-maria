@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João & Maria Hamburgueria</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <img src="imagens/logo.png" alt="João & Maria Logo" class="logo-img" />
+            <ul class="navbar-menu" id="navbarMenu">
+                <li><a href="#hero">Início</a></li>
+                <li><a href="#quem-somos">Quem Somos</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#onde-estamos">Contato</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+        <div class="hero-image">
+            <img src="imagens/burguer.jpeg" alt="Smash Burger Principal" />
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hambúrguer<br>de verdade.<br><span class="highlight">Sabor de qualidade.</span></h1>
+                <p>Carne na chapa, ingredientes de qualidade<br>e sabor que vicia.</p>
+                <div class="hero-tags">
+                    <span class="tag">Artesanal</span>
+                    <span class="tag">Caldos</span>
+                    <span class="tag">Porções</span>
+                    <span class="tag">Açaí</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUEM SOMOS -->
+    <section class="quem-somos" id="quem-somos">
+        <h2>Quem Somos</h2>
+        <div class="quem-somos-content">
+            <div class="quem-somos-text">
+                <p>A João & Maria Hamburgueria nasceu de um sonho simples e poderoso: transformar momentos em memórias.</p>
+                
+                <p>Somos uma família que sempre acreditou que a melhor conversa acontece em volta da mesa, que receitas carregam histórias e que comida feita com amor tem um sabor diferente. Entre testes na cozinha, risadas das crianças, noites longas e muita coragem, decidimos transformar esse sonho em realidade.</p>
+                
+                <p>Cada hambúrguer que sai da nossa chapa carrega mais do que ingredientes selecionados — carrega dedicação, união e propósito. Aqui, nada é por acaso: do pão macio à carne suculenta, do atendimento acolhedor ao cuidado com cada detalhe.</p>
+                
+                <p>A João & Maria é sobre família, sobre crescer juntos, sobre ensinar pelo exemplo e mostrar que sonhos compartilhados ficam maiores. É sobre abrir as portas e fazer você se sentir em casa.</p>
+                
+                <p class="destaque" style="margin-top: 30px;">💛 Seja bem-vindo à nossa história.<br>Sente-se, aproveite e faça parte dela.</p>
+            </div>
+            <div class="quem-somos-image">
+                <img src="imagens/familia.png" alt="Família João & Maria" />
+            </div>
+        </div>
+    </section>
+
+    <!-- MISSÃO, VISÃO & VALORES -->
+    <section class="missao-visao-valores">
+        <h2>Missão, Visão & Valores</h2>
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h3>Nossa Missão</h3>
+                <p>Oferecer hambúrgueres artesanais feitos com qualidade, carinho e propósito, criando experiências que conectam pessoas, fortalecem laços e transformam cada refeição em um momento especial para toda a família.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon vision">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h3>Nossa Visão</h3>
+                <p>Ser reconhecida como uma hamburgueria que vai além do sabor, tornando-se referência em atendimento acolhedor, comida honesta e impacto positivo na vida das pessoas, crescendo sem perder a essência familiar que deu origem ao nosso sonho.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon values">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Nossos Valores</h3>
+                <p>Acreditamos que tudo começa em casa — respeito, união, cuidado e amor estão presentes em cada decisão.</p>
+                <p>Selecionamos ingredientes, processos e pessoas com o mesmo cuidado que teríamos ao cozinhar para quem amamos.</p>
+                <p><strong>Propósito em cada detalhe</strong><br>Nada aqui é feito por acaso. Cada escolha tem um porquê.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIA CARROSEL -->
+    <section class="galeria" id="galeria">
+        <h2>Galeria</h2>
+        <div class="galeria-container">
+            <div class="galeria-wrapper">
+                <button class="carrosel-btn prev" onclick="moveSlide(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="galeria-items" id="galeriaItems">
+                    <div class="galeria-item active">
+                        <img src="imagens/burguer.jpeg" alt="Burger" />
+                    </div>
+                    <div class="galeria-item">
+                        <img src="imagens/cerveja.jpeg" alt="Cerveja" />
+                    </div>
+                    <div class="galeria-item">
+                        <img src="imagens/lugar.jpeg" alt="Lugar" />
+                    </div>
+                    <div class="galeria-item">
+                        <img src="imagens/caldo.jpeg" alt="Caldo" />
+                    </div>
+                    <div class="galeria-item">
+                        <img src="imagens/lugar2.jpeg" alt="Lugar 2" />
+                    </div>
+                    <div class="galeria-item">
+                        <img src="imagens/espelho.jpeg" alt="Espelho" />
+                    </div>
+                </div>
+                <button class="carrosel-btn next" onclick="moveSlide(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="carrosel-dots" id="carroselDots"></div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-final">
+        <h2>Pediu, chegou.</h2>
+        <p>Tudo que você ama em um só lugar.</p>
+        
+        <div class="produtos-container">
+            <div class="produto-card">
+                <div class="produto-icon">
+                    <i class="fas fa-beer"></i>
+                </div>
+                <h3>Cerveja Gelada</h3>
+                <p>Sempre geladinha para acompanhar</p>
+            </div>
+            <div class="produto-card">
+                <div class="produto-icon">
+                    <i class="fas fa-bowl-food"></i>
+                </div>
+                <h3>Caldos</h3>
+                <p>Quentinhos e deliciosos</p>
+            </div>
+            <div class="produto-card">
+                <div class="produto-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3>Porções</h3>
+                <p>Generosas e saborosas</p>
+            </div>
+            <div class="produto-card">
+                <div class="produto-icon">
+                    <i class="fas fa-snowflake"></i>
+                </div>
+                <h3>Açaí</h3>
+                <p>Refrescante e nutritivo</p>
+            </div>
+            <div class="produto-card">
+                <div class="produto-icon">
+                    <i class="fas fa-burger"></i>
+                </div>
+                <h3>Hambúrguer</h3>
+                <p>Nosso prato principal</p>
+            </div>
+        </div>
+
+    <!-- ONDE ESTAMOS -->
+    <section class="onde-estamos" id="onde-estamos">
+        <div class="onde-content">
+            <div class="onde-mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.7832145784676!2d-46.413!3d-23.661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce4f77f8b7b7b7%3A0x1e1e1e1e1e1e1e1e!2sAv.%20Utinga%2C%201657%20-%20Utinga%2C%20Santo%20Andr%C3%A9%20-%20SP%2009220-611!5e0!3m2!1spt-BR!2sbr!4v1234567890" style="width:100%; height:400px; border-radius:10px; border:none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="onde-info">
+                <h2>Onde Estamos</h2>
+                <div class="endereco">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <p><strong>Av. Utinga, 1657</strong></p>
+                        <p>Utinga - Santo André, SP 09220-611</p>
+                    </div>
+                </div>
+                <div class="horario">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <p><strong>Horário de Funcionamento</strong></p>
+                        <p>Quarta a Segunda: 10h às 22h</p>
+                    </div>
+                </div>
+                <div class="contato">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <p><strong>Contato</strong></p>
+                        <p><a href="tel:+5511970419983" style="color: inherit; text-decoration: none;">(11) 97041-9983</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-sociais">
+                <a href="https://wa.me/5511970419983?text=Olá%20João%20e%20Maria%20Hamburgueria" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/joao_e_maria_hamburgueria?igsh=MWR1MGd5MnBycmg0bQ%3D%3D" class="social-link"><i class="fab fa-instagram"></i></a>
+                <p>&copy; 2026 João & Maria Hamburgueria. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

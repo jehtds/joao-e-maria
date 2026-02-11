@@ -1,0 +1,12 @@
+{
+  "name": "joao-maria-hamburgueria",
+  "version": "1.0.0",
+  "description": "Landing page para João & Maria Hamburgueria",
+  "scripts": {
+    "dev": "npx http-server -p 8080 -o",
+    "start": "npx http-server -p 8080"
+  },
+  "keywords": ["hamburgueria", "landing-page"],
+  "author": "",
+  "license": "ISC"
+}
