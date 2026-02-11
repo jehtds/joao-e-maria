@@ -53,12 +53,11 @@ body {
     border-radius: 50%;
     object-fit: cover;
     transition: transform 0.3s ease;
-    position: absolute;
-    left: -20px;
-    top: 10px;
+    position: fixed;
+    left: 20px;
+    top: -70px;
     z-index: 2000;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-    flex-shrink: 0;
 }
 
 .logo-img:hover {
@@ -730,191 +729,549 @@ body {
 /* RESPONSIVO */
 @media (max-width: 768px) {
     body {
-        padding-top: 80px;
+        padding-top: 90px;
     }
 
-    .logo-img {
-        width: 150px;
-        height: 150px;
-        left: -15px;
-        top: 8px;
+    /* NAVBAR TABLET */
+    .navbar {
+        min-height: 90px;
+        padding: 10px 15px;
     }
 
-    .navbar-menu {
-        margin-left: 200px;
-    }
-
-    .navbar-menu {
-        position: absolute;
-        top: 70px;
-        left: 0;
+    .navbar-container {
+        height: auto;
         flex-direction: column;
-        width: 100%;
-        background-color: rgba(26, 26, 26, 0.99);
-        gap: 0;
-        margin-left: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-    }
-
-    .navbar-menu.active {
-        max-height: 400px;
-        padding: 20px 0;
-    }
-
-    .navbar-menu li {
-        padding: 15px 20px;
-        border-bottom: 1px solid rgba(196, 30, 58, 0.2);
-    }
-
-    .navbar-menu li a {
-        font-size: 1rem;
-    }
-
-    .hamburger {
-        display: flex;
-        margin-right: 20px;
-    }
-
-    .hero-content {
-        justify-content: center;
-        padding: 40px 20px;
-    }
-
-    .hero-text {
-        max-width: 100%;
-        padding: 40px 30px;
-    }
-
-    .hero-text h1 {
-        font-size: 2rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-
-    .btn {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .quem-somos-content {
-        grid-template-columns: 1fr;
-    }
-
-    .onde-content {
-        grid-template-columns: 1fr;
-    }
-
-    .galeria-wrapper {
-        gap: 10px;
-    }
-
-    .carrosel-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 1rem;
-    }
-
-    .produtos-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-
-    .cta-buttons {
-        flex-direction: column;
-    }
-
-    .cta-buttons .btn {
-        width: 100%;
-    }
-
-    h2 {
-        font-size: 2rem !important;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        padding-top: 80px;
+        align-items: flex-start;
     }
 
     .logo-img {
         width: 130px;
         height: 130px;
-        left: -10px;
-        top: 6px;
+        left: 15px;
+        top: -45px;
+        position: fixed;
     }
 
     .navbar-menu {
-        margin-left: 160px;
-        gap: 20px;
+        margin-left: 0 !important;
+        width: 100%;
+        gap: 12px;
+        padding: 10px 0 0 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
+        max-height: none !important;
+        background-color: transparent;
+        order: 3;
+    }
+
+    .navbar-menu li {
+        padding: 0;
+        border-bottom: none !important;
     }
 
     .navbar-menu li a {
         font-size: 0.9rem;
+        padding: 6px 10px;
+        color: white;
+        text-decoration: none;
     }
 
-    .navbar-menu {
-        position: absolute;
-        top: 70px;
-        left: 0;
-        flex-direction: column;
-        width: 100%;
-        background-color: rgba(26, 26, 26, 0.99);
-        gap: 0;
-        margin-left: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
+    .hamburger {
+        display: none !important;
     }
 
-    .navbar-menu.active {
-        max-height: 400px;
-        padding: 20px 0;
+    /* HERO TABLET */
+    .hero {
+        padding: 40px 15px;
+        min-height: 60vh;
     }
 
-    .navbar-menu li {
-        padding: 12px 20px;
-        border-bottom: 1px solid rgba(196, 30, 58, 0.2);
+    .hero-text {
+        position: relative;
+        right: 0;
+        transform: none;
+        text-align: center;
+        padding: 20px 12px;
+        max-width: 100%;
     }
 
     .hero-text h1 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
+        line-height: 1.3;
+        margin-bottom: 10px;
+    }
+
+    .hero-text > p {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
     }
 
     .hero-tags {
-        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
     }
 
     .tag {
-        width: 100%;
-        text-align: center;
+        font-size: 0.8rem;
+        padding: 6px 12px;
     }
 
-    .galeria-wrapper {
-        flex-wrap: wrap;
+    /* SEÇÕES TABLET */
+    .quem-somos {
+        padding: 45px 15px;
     }
 
-    .carrosel-btn {
-        width: 35px;
-        height: 35px;
-        font-size: 0.9rem;
+    .quem-somos h2 {
+        font-size: 1.6rem;
+        margin-bottom: 25px;
     }
 
-    .carrosel-dots {
-        order: 3;
-        width: 100%;
-    }
-
-    .produtos-container {
+    .quem-somos-content {
         grid-template-columns: 1fr;
-        gap: 12px;
+        gap: 30px;
+    }
+
+    .quem-somos-text p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    /* MISSÃO/VISÃO/VALORES */
+    .missao-visao-valores {
+        padding: 45px 15px;
+    }
+
+    .missao-visao-valores h2 {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
     }
 
     .cards-container {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card {
+        padding: 20px 15px;
+    }
+
+    .card h3 {
+        font-size: 1.15rem;
+    }
+
+    .card p {
+        font-size: 0.85rem;
+    }
+
+    /* GALERIA */
+    .galeria {
+        padding: 30px 15px;
+    }
+
+    .galeria h2 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .galeria-wrapper {
+        gap: 6px;
+        flex-direction: row;
+    }
+
+    .galeria-items {
+        width: 100%;
+    }
+
+    .carrosel-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 0.95rem;
+        flex-shrink: 0;
+    }
+
+    /* CTA FINAL */
+    .cta-final {
+        padding: 45px 15px;
+    }
+
+    .cta-final h2 {
+        font-size: 1.6rem;
+        margin-bottom: 8px;
+    }
+
+    .cta-final p {
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+    }
+
+    .produtos-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .produto-card {
+        padding: 15px 10px;
+    }
+
+    /* ONDE ESTAMOS */
+    .onde-estamos {
+        padding: 45px 15px;
+    }
+
+    .onde-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .onde-info h2 {
+        font-size: 1.6rem;
+        margin-bottom: 25px;
+    }
+
+    .onde-mapa iframe {
+        height: 280px;
+    }
+
+    /* GERAL */
+    h2 {
+        font-size: 1.6rem !important;
+    }
+
+    .btn {
+        padding: 9px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 85px;
+    }
+
+    /* NAVBAR MOBILE */
+    .navbar {
+        min-height: 85px;
+        padding: 8px 10px;
+    }
+
+    .navbar-container {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo-img {
+        width: 110px;
+        height: 110px;
+        left: 10px;
+        top: -40px;
+        position: fixed;
+    }
+
+    .navbar-menu {
+        margin-left: 0 !important;
+        width: 100%;
+        gap: 6px;
+        padding: 8px 0 0 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
+        max-height: none !important;
+        background-color: transparent;
+        order: 3;
+    }
+
+    .navbar-menu li {
+        padding: 0;
+        border-bottom: none !important;
+    }
+
+    .navbar-menu li a {
+        font-size: 0.8rem;
+        padding: 5px 8px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .hamburger {
+        display: none !important;
+    }
+
+    /* HERO MOBILE */
+    .hero {
+        padding: 20px 10px;
+        min-height: 55vh;
+    }
+
+    .hero::before {
+        display: none;
+    }
+
+    .hero-text {
+        padding: 15px 8px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.25rem;
+        line-height: 1.2;
+        margin-bottom: 8px;
+    }
+
+    .hero-text > p {
+        font-size: 0.85rem;
+        margin-bottom: 18px;
+        line-height: 1.4;
+    }
+
+    .hero-tags {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .tag {
+        font-size: 0.7rem;
+        padding: 5px 9px;
+    }
+
+    /* SEÇÕES MOBILE */
+    .quem-somos {
+        padding: 30px 10px;
+    }
+
+    .quem-somos h2 {
+        font-size: 1.35rem;
+        margin-bottom: 20px;
+    }
+
+    .quem-somos-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .quem-somos-text p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+
+    /* MISSÃO/VISÃO/VALORES MOBILE */
+    .missao-visao-valores {
+        padding: 30px 10px;
+    }
+
+    .missao-visao-valores h2 {
+        font-size: 1.35rem;
+        margin-bottom: 20px;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .card {
+        padding: 15px 10px;
+    }
+
+    .card h3 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .card p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+
+    .card ul li {
+        font-size: 0.8rem;
+    }
+
+    /* GALERIA MOBILE */
+    .galeria {
+        padding: 25px 10px;
+    }
+
+    .galeria h2 {
+        font-size: 1.35rem;
+        margin-bottom: 15px;
+    }
+
+    .galeria-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5px;
+    }
+
+    .galeria-items {
+        width: 100%;
+        aspect-ratio: 16/10;
+    }
+
+    .carrosel-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 0.75rem;
+        order: -1;
+        margin-bottom: 6px;
+    }
+
+    .carrosel-dots {
+        margin-top: 6px;
+        gap: 6px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    /* CTA FINAL MOBILE */
+    .cta-final {
+        padding: 30px 10px;
+    }
+
+    .cta-final h2 {
+        font-size: 1.35rem;
+        line-height: 1.3;
+        margin-bottom: 6px;
+    }
+
+    .cta-final p {
+        font-size: 0.85rem;
+        margin-bottom: 25px;
+    }
+
+    .produtos-container {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .produto-card {
+        padding: 12px 8px;
+    }
+
+    .produto-icon {
+        font-size: 1.6rem;
+        margin-bottom: 6px;
+    }
+
+    .produto-card h3 {
+        font-size: 0.9rem;
+        margin-bottom: 4px;
+    }
+
+    .produto-card p {
+        font-size: 0.75rem;
+    }
+
+    /* ONDE ESTAMOS MOBILE */
+    .onde-estamos {
+        padding: 30px 10px;
+    }
+
+    .onde-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .onde-info h2 {
+        font-size: 1.35rem;
+        margin-bottom: 20px;
+    }
+
+    .endereco,
+    .horario,
+    .contato {
+        gap: 8px;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+    }
+
+    .endereco p,
+    .horario p,
+    .contato p {
+        font-size: 0.8rem;
+    }
+
+    .onde-mapa iframe {
+        height: 200px;
+    }
+
+    /* FOOTER MOBILE */
+    .footer-sociais {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .footer-sociais p {
+        font-size: 0.7rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .social-link {
+        font-size: 1.1rem;
+    }
+
+    /* GERAL MOBILE */
+    h2 {
+        font-size: 1.35rem !important;
+    }
+
+    .btn {
+        padding: 7px 12px;
+        font-size: 0.8rem;
+    }
+}
+
+/* EXTRA SMALL */
+@media (max-width: 320px) {
+    body {
+        padding-top: 80px;
+    }
+
+    .navbar {
+        min-height: 80px;
+    }
+
+    .logo-img {
+        width: 95px;
+        height: 95px;
+        top: -35px;
+    }
+
+    .navbar-menu {
+        gap: 4px;
+        padding: 6px 0 0 0;
+    }
+
+    .navbar-menu li a {
+        font-size: 0.7rem;
+        padding: 4px 5px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.1rem;
+    }
+
+    .hero-text > p {
+        font-size: 0.8rem;
+    }
+
+    h2 {
+        font-size: 1.2rem !important;
+    }
+
+    .tag {
+        font-size: 0.65rem;
+        padding: 4px 7px;
     }
 }

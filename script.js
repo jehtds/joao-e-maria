@@ -1,22 +1,3 @@
-// Hamburger Menu Toggle
-const hamburger = document.getElementById('hamburger');
-const navbarMenu = document.getElementById('navbarMenu');
-
-if (hamburger) {
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navbarMenu.classList.toggle('active');
-    });
-}
-
-// Close menu when a link is clicked
-document.querySelectorAll('.navbar-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navbarMenu.classList.remove('active');
-    });
-});
-
 // Carrosel Galeria
 let currentSlide = 0;
 const slides = document.querySelectorAll('.galeria-item');
