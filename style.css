@@ -645,31 +645,69 @@ body {
     font-weight: 900;
 }
 
-.endereco,
-.horario,
-.contato {
+/* ESTILO INDIVIDUAL PARA CADA ITEM DO ONDE ESTAMOS */
+.endereco, .horario, .contato {
     display: flex;
-    gap: 2px;
+    align-items: flex-start;
     margin-bottom: 30px;
     padding-bottom: 30px;
     border-bottom: 1px solid rgba(196, 30, 58, 0.3);
-    align-items: flex-start;
 }
 
-.endereco:last-of-type,
-.horario:last-of-type,
-.contato:last-of-type {
+.endereco:last-of-type, .horario:last-of-type, .contato:last-of-type {
     border-bottom: none;
 }
 
-.endereco i,
-.horario i,
-.contato i {
+/* Container de texto para todos */
+.endereco div, .horario div, .contato div {
+    display: flex;
+    flex-direction: column;
+}
+
+.endereco p, .horario p, .contato p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Ícones base */
+.onde-info i {
     color: #c41e3a;
     font-size: 1.5rem;
-    min-width: 24px;
     text-align: center;
+    flex-shrink: 0;
+}
+
+/* Ajustes Individuais de Alinhamento e Distância */
+.endereco i {
+    width: 25px;
+    margin-right: 12px;
     margin-top: 2px;
+}
+
+.horario i {
+    width: 25px;
+    margin-right: 12px;
+    margin-top: 3px;
+}
+
+.contato i {
+    width: 25px;
+    margin-right: 12px;
+    margin-top: 4px;
+}
+
+.endereco p strong, .horario p strong, .contato p strong {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--light-text);
+    font-size: 1.1rem;
+}
+
+.endereco div,
+.horario div,
+.contato div {
+    display: flex;
+    flex-direction: column;
 }
 
 .endereco p,
@@ -677,17 +715,16 @@ body {
 .contato p {
     margin: 0;
     font-size: 1rem;
+    line-height: 1.4;
 }
 
-.endreco p strong {
-    margin-left: 10px;
-}
 .endereco p strong,
 .horario p strong,
 .contato p strong {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     color: var(--light-text);
+    font-size: 1.1rem;
 }
 
 /* FOOTER */
@@ -968,10 +1005,10 @@ body {
     }
 
     .logo-img {
-        width: 60px;
-        height: 80px;
-        left: 10px;
-        top: 5px;
+        width: 110px;
+        height: 110px;
+        left: 3px;
+        top: -5px;
         position: absolute;
         z-index: 1001;
     }
@@ -979,10 +1016,10 @@ body {
     .navbar-menu {
         margin-left: 0 !important;
         width: 100%;
-        gap: 2px;
-        padding: 5px 0 5px 85px; /* Abre espaço para o logo à esquerda */
-        justify-content: flex-end;
-        flex-wrap: wrap;
+        gap: 0px;
+        padding: 5px 0 5px 110px; /* Abre espaço para o logo à esquerda */
+        justify-content: flex-start;
+        flex-wrap: nowrap;
         position: relative;
         max-height: none !important;
         background-color: transparent;
@@ -994,10 +1031,11 @@ body {
     }
 
     .navbar-menu li a {
-        font-size: 0.75rem;
-        padding: 4px 6px;
+        font-size: 0.68rem;
+        padding: 4px 5px;
         color: white;
         text-decoration: none;
+        white-space: nowrap;
     }
 
     .hamburger {
@@ -1266,15 +1304,15 @@ body {
     }
 
     .logo-img {
-        width: 95px;
-        height: 95px;
-        left: 3px;
-        top: 25px;
+        width: 90px;
+        height: 90px;
+        left: 5px;
+        top: -10px;
     }
 
     .navbar-menu {
         gap: 4px;
-        padding: 6px 0 0 0;
+        padding: 6px 0 5px 100px;
     }
 
     .navbar-menu li a {
